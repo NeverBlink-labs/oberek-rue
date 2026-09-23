@@ -1,0 +1,9 @@
+title: OBEREK RUE
+description: Open environmental monitoring for l'Albufera de València – water quality, habitat health and community feedback.
+lang: en
+
+# Source logo packs – only the web copies in assets/img are published.
+exclude:
+  - "EU Emblem"
+  - "RURBANIVE logos & brandbook"
+  - README.md

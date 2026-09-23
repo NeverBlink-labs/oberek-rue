@@ -1,0 +1,138 @@
+---
+---
+{% assign rue = site.data.rue %}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ rue.name }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ rue.name }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:type" content="website">
+  <style>
+    /* Colours taken from the OBEREK dashboard (oberek.neverblink.eu) */
+    :root {
+      --green-dark: #1b4332; --green: #2a7c5e; --green-light: #d8f3dc; --green-muted: #95d5b2;
+      --bg: #f4f6f3; --card: #ffffff; --border: #e2e8e0;
+      --text: #1a1f16; --text-muted: #5c6b57;
+      --warning-bg: #fde8d8; --warning-text: #7c3009;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.6;
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+    a { color: var(--green); } a:hover { color: #236b50; }
+
+    header { background: var(--green-dark); color: var(--green-light); padding: 2rem 0 1.75rem; }
+    header h1 { color: #fff; margin: 0 0 0.25rem; font-size: 1.875rem; }
+    header p { margin: 0.25rem 0; }
+    .status { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; font-size: 0.875rem; }
+    .pill { background: rgba(255,255,255,0.1); color: var(--green-light); border: 1px solid var(--green-muted);
+            border-radius: 999px; padding: 0.1rem 0.75rem; }
+
+    main, footer .wrap > div { background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+                               box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06); }
+    main { margin: -0.75rem auto 0; padding: 0.5rem 24px 1.5rem; position: relative; }
+    h2 { color: var(--green-dark); font-size: 1.25rem; margin: 1.75rem 0 0.75rem; padding-left: 0.6rem;
+         border-left: 4px solid var(--green); line-height: 1.3; }
+    dt { font-weight: 600; } dd { margin: 0 0 0.75rem 0; color: var(--text-muted); }
+
+    .keis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .kei { background: var(--green-light); border-radius: 8px; padding: 0.75rem 1rem; }
+    .kei strong { display: block; color: var(--green-dark); }
+    .kei span { font-size: 0.9rem; color: #1b4332; }
+
+    .soon { color: var(--text-muted); }
+    .access { display: grid; gap: 12px; }
+    .access-item { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1.5rem;
+                   border: 1px solid var(--border); border-radius: 8px; padding: 0.875rem 1rem; }
+    .access-item strong { display: block; }
+    .access-item span { color: var(--text-muted); font-size: 0.9rem; }
+    .btn { display: inline-block; border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.875rem; font-weight: 600;
+           background: var(--green); color: #fff; text-decoration: none; white-space: nowrap; }
+    .btn:hover { background: #236b50; color: #fff; }
+    .btn-off, .btn-off:hover { background: var(--bg); color: var(--text-muted); border: 1px dashed var(--green-muted);
+                               font-weight: 500; cursor: default; }
+
+    footer { padding: 1.5rem 0 2rem; font-size: 0.875rem; color: var(--text-muted); }
+    footer .wrap > div { padding: 1.25rem 24px; }
+    .logos { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 2.5rem; margin-bottom: 1rem; }
+    .logos img { height: 56px; width: auto; max-width: 100%; display: block; }
+    @media (max-width: 480px) { main, footer .wrap > div { padding-left: 16px; padding-right: 16px; } .logos img { height: 44px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>{{ rue.name }}</h1>
+      <p>{{ rue.tagline }}</p>
+      <div class="status">
+        <span class="pill">Status: {{ rue.status }}</span>
+        <span class="pill">Updated {{ rue.last_updated }}</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+  <h2>About</h2>
+  {{ rue.summary | markdownify }}
+
+  <h2>What it measures</h2>
+  <div class="keis">
+  {% for i in rue.indicators %}<div class="kei"><strong>{{ i.name }}</strong><span>{{ i.description }}</span></div>{% endfor %}
+  </div>
+
+  <h2>Data sources</h2>
+  <dl>
+  {% for s in rue.sources %}<dt>{{ s.name }}</dt><dd>{{ s.description }}</dd>{% endfor %}
+  </dl>
+
+  <h2>Access</h2>
+  <div class="access">
+  {% for item in rue.access %}
+    <div class="access-item">
+      <div>
+        <strong>{{ item.label }}</strong>
+        <span>{{ item.description }}</span>
+      </div>
+      {% if item.url %}<a class="btn" href="{{ item.url }}">Open</a>{% else %}<span class="btn btn-off" aria-disabled="true">Link coming soon</span>{% endif %}
+    </div>
+  {% endfor %}
+  </div>
+
+  <h2>Metadata</h2>
+  <dl>
+  {% for m in rue.metadata %}<dt>{{ m.label }}</dt><dd>{% if m.url %}<a href="{{ m.url }}">{{ m.value }}</a>{% else %}{{ m.value }}{% endif %}</dd>{% endfor %}
+  </dl>
+
+  <h2>Support resources</h2>
+  {% if rue.support.size > 0 %}
+  <ul>
+  {% for s in rue.support %}<li><a href="{{ s.url | relative_url }}">{{ s.title }}</a></li>{% endfor %}
+  </ul>
+  {% else %}<p class="soon">User guide and tutorials coming soon.</p>{% endif %}
+
+  <h2>Promotional materials</h2>
+  {% if rue.promo.size > 0 %}
+  <ul>
+  {% for p in rue.promo %}<li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>{% endfor %}
+  </ul>
+  {% else %}<p class="soon">Coming soon.</p>{% endif %}
+
+  <h2>Contact</h2>
+  <p>{{ rue.contact.name }}{% if rue.contact.email %} – <a href="mailto:{{ rue.contact.email }}">{{ rue.contact.email }}</a>{% endif %}</p>
+  </main>
+
+  <footer>
+    <div class="wrap"><div>
+      <div class="logos">
+      {% for l in rue.logos %}{% if l.url %}<a href="{{ l.url }}">{% endif %}<img src="{{ l.src | relative_url }}" alt="{{ l.alt }}">{% if l.url %}</a>{% endif %}{% endfor %}
+      </div>
+      {{ rue.funding | markdownify }}
+      {{ rue.disclaimer | markdownify }}
+    </div></div>
+  </footer>
+</body>
+</html>
