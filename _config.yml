@@ -7,3 +7,4 @@ exclude:
   - "EU Emblem"
   - "RURBANIVE logos & brandbook"
   - README.md
+  - scripts

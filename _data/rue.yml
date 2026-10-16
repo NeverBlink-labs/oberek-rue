@@ -1,12 +1,13 @@
 name: OBEREK RUE
 tagline: Open environmental monitoring for l'Albufera de València – water quality, habitat health and community feedback in one place.
-status: In deployment        # In deployment / Live / Maintenance
-last_updated: "2026-09-23"
+status: Validated            # Community Store maturity: Prototype / Pilot / Validated
+last_updated: "2026-10-16"
 
 summary: |
-  OBEREK brings together data from water-quality sensors, existing monitoring
-  networks, satellite imagery and a community poll to show the state of
-  l'Albufera de València, the coastal lagoon and wetland south of Valencia.
+  OBEREK brings together data from water-quality sensors, a weather station,
+  flow gauging stations, satellite imagery and a community poll to show the
+  state of l'Albufera de València, the coastal lagoon and wetland south of
+  Valencia.
 
   From this data it builds three **Key Ecological Indicators (KEIs)**, each
   shown on a five-level scale from Very good to Critical. They give local
@@ -21,7 +22,7 @@ indicators:
   - name: "KEI-1: Water quality"
     description: Condition of the lagoon water. Sensor readings and satellite estimates are compared with reference values based on scientific literature and expert judgement.
   - name: "KEI-2: Habitat health"
-    description: Condition of the water and land habitats. Uses the same water data plus wind speed and rice blast risk (a fungal disease of rice) from weather stations. The worse of the water and land results is shown.
+    description: Condition of the water and land habitats. Uses the same water data plus wind speed and rice blast risk (a fungal disease of rice) from the weather station. The worse of the water and land results is shown.
   - name: "KEI-3: Community feedback"
     description: How closely people's own rating of the environment, from the community poll, matches KEI-1 and KEI-2. A high level means the two agree, not that the environment is in good condition. Values appear once poll responses come in.
 
@@ -29,9 +30,9 @@ sources:
   - name: Water-quality sensors (UPV)
     description: Sensors at three sites in the lagoon, run by the Universitat Politècnica de València. They measure pH, dissolved oxygen, electrical conductivity, salinity, turbidity and water temperature. Used in KEI-1 and KEI-2.
   - name: Flow gauging stations (CHJ)
-    description: Daily data from the Júcar river basin authority (Confederación Hidrográfica del Júcar) on the lagoon's water level and the flow through the golas, the channels linking the lagoon to the sea. Shown for context only and not used in the scores.
-  - name: AVAMET weather stations
-    description: Stations at Tancat de la Pipa and Tancat de l'Estell, from the Valencian Meteorology Association (AVAMET). Wind speed and a rice blast risk index, worked out from humidity, temperature, rainfall and leaf wetness, are used in KEI-2. Other weather readings are shown for context.
+    description: Daily data from six gauging stations of the Júcar river basin authority (Confederación Hidrográfica del Júcar) on the lagoon's water level and the flow through the golas, the channels linking the lagoon to the sea. Shown for context only and not used in the scores.
+  - name: Weather station Tancat de l'Estell (Fundació Assut)
+    description: Weather data from the Tancat de l'Estell station, run by Fundació Assut and part of the AVAMET network, next to the South location. Wind speed and a rice blast risk index, worked out from humidity, temperature, rainfall and leaf wetness, are used in KEI-2. Other weather readings are shown for context.
   - name: Copernicus Sentinel-2 satellite
     description: Satellite estimates of chlorophyll-a, phycocyanin (both signs of algae) and Secchi depth (water clarity), used in KEI-1 and KEI-2. Vegetation and water layers such as NDVI and NDWI are shown for context only.
   - name: Community perception poll
@@ -43,6 +44,12 @@ access:
   - label: Web dashboard
     url: https://oberek.neverblink.eu/
     description: Maps, charts and KEI levels in English, Spanish and Valencian
+  - label: Code, ontology and metadata
+    url: https://github.com/NeverBlink-labs/oberek-code
+    description: The data ingestion and reasoning pipelines, the OBEREK ontology and the metadata, on GitHub
+  - label: Data and code snapshot
+    url: https://doi.org/10.5281/zenodo.23418104
+    description: The data collected and calculated up to October 2026, with a copy of the code, on Zenodo
 
 metadata:
   - label: Provider
@@ -52,14 +59,19 @@ metadata:
   - label: Languages
     value: English, Spanish, Valencian
   - label: Licence
-    value: CC BY 4.0
-    url: https://creativecommons.org/licenses/by/4.0/
+    value: CC BY 4.0 for OBEREK data, ontology and metadata; Apache 2.0 for code; Sentinel-2 and CHJ data under their sources' terms
 
 # Add items like:  - title: User guide
 #                    url: assets/support/user-guide.pdf
 support:
   - title: Help and documentation (on the dashboard)
     url: https://oberek.neverblink.eu/help
+  - title: "Tutorial: how to read the dashboard (for everyone)"
+    url: tutorials/dashboard/
+  - title: "Tutorial: follow a sensor station in real time (for developers)"
+    url: tutorials/live-data/
+  - title: "Tutorial: analyse the raw data with metadata and SPARQL (for researchers)"
+    url: tutorials/research/
 promo: []
 
 # Shown in the footer, in this order. EU rules: the EU emblem must be at least

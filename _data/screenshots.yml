@@ -1,0 +1,242 @@
+# Written by scripts/capture_screenshots.py. Do not edit by hand.
+aux-flow:
+  alt: Flow rate cards for the gauging stations on the channels between the lagoon
+    and the sea
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/aux-flow.png
+  height: 672
+  location: Global
+  markers:
+  - n: 1
+    x: 40.45
+    y: 20.24
+  viewport: desktop
+  width: 1208
+aux-weather:
+  alt: 'Weather cards from the Tancat de l''Estell station: pressure, sunlight, evapotranspiration,
+    temperature, leaf wetness, humidity, rain and a wind rose'
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/aux-weather.png
+  height: 1186
+  location: Location S
+  markers:
+  - n: 1
+    x: 47.99
+    y: 73.62
+  - n: 2
+    x: 80.8
+    y: 73.62
+  viewport: desktop
+  width: 1208
+footer:
+  alt: 'The bottom of every page: last update time, refresh button, data use notice
+    and contact'
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/footer.png
+  height: 132
+  location: Global
+  markers:
+  - n: 1
+    x: 57.96
+    y: 14.77
+  - n: 2
+    x: 71.11
+    y: 13.63
+  - n: 3
+    x: 78.6
+    y: 14.77
+  viewport: desktop
+  width: 1240
+kei-cards:
+  alt: 'The three indicator cards: water quality, habitat health and community feedback,
+    each with a level and a small chart'
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/kei-cards.png
+  height: 247
+  location: Location SW
+  markers:
+  - n: 1
+    x: 18.85
+    y: 18.92
+  - n: 2
+    x: 22.05
+    y: 23.28
+  - n: 3
+    x: 16.45
+    y: 61.54
+  viewport: desktop
+  width: 1208
+kei1-cards:
+  alt: Six measurement cards for the SouthWest water sensors, each with a status label,
+    the latest value and a chart
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/kei1-cards.png
+  height: 516
+  location: Location SW
+  markers:
+  - n: 1
+    x: 5.82
+    y: 7.27
+  - n: 2
+    x: 21.75
+    y: 7.17
+  - n: 3
+    x: 9.16
+    y: 18.51
+  - n: 4
+    x: 21.41
+    y: 57.17
+  viewport: desktop
+  width: 1208
+kei1-satellite:
+  alt: Satellite measurements for the SouthWest area next to a coloured map of the
+    same area
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/kei1-satellite.png
+  height: 894
+  location: Location SW
+  markers:
+  - n: 1
+    x: 44.66
+    y: 4.14
+  - n: 2
+    x: 55.75
+    y: 2.52
+  - n: 3
+    x: 78.62
+    y: 31.66
+  viewport: desktop
+  width: 1208
+kei1-trend:
+  alt: 'The water quality page: a line chart of the score over the last 30 days, with
+    the current level in the corner'
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/kei1-trend.png
+  height: 357
+  location: Location SW
+  markers:
+  - n: 1
+    x: 89.16
+    y: 16.11
+  - n: 2
+    x: 30.06
+    y: 12.53
+  viewport: desktop
+  width: 1208
+kei2-weather:
+  alt: The habitat health page for the South location, showing the rice blast risk
+    and wind speed cards
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/kei2-weather.png
+  height: 960
+  location: Location S
+  markers:
+  - n: 1
+    x: 25.42
+    y: 69.29
+  - n: 2
+    x: 8.92
+    y: 82.52
+  - n: 3
+    x: 43.34
+    y: 82.73
+  - n: 4
+    x: 62.66
+    y: 79.18
+  viewport: desktop
+  width: 1240
+kei3:
+  alt: 'The community feedback page: the KEI-3 level over time, one ring chart per
+    poll question, and a bar chart of who answered'
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/kei3.png
+  height: 1180
+  location: Global
+  markers:
+  - n: 1
+    x: 87.08
+    y: 15.62
+  - n: 2
+    x: 25.1
+    y: 46.15
+  - n: 3
+    x: 16.88
+    y: 56.06
+  - n: 4
+    x: 68.74
+    y: 46.15
+  viewport: desktop
+  width: 1240
+locations-map:
+  alt: Map of l'Albufera with the three monitoring locations and the flow gauging
+    stations
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/locations-map.png
+  height: 760
+  location: Global
+  markers: []
+  viewport: desktop
+  width: 1208
+overview:
+  alt: 'The OBEREK dashboard main page: menu on the left, location buttons at the
+    top, three indicator cards and the start of the community poll'
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/overview.png
+  height: 900
+  location: Global
+  markers:
+  - n: 1
+    x: 12.25
+    y: 11.06
+  - n: 2
+    x: 52.51
+    y: 5.72
+  - n: 3
+    x: 30.81
+    y: 15.75
+  - n: 4
+    x: 28.52
+    y: 44.78
+  - n: 5
+    x: 14.58
+    y: 96.72
+  viewport: desktop
+  width: 1440
+phone:
+  alt: 'The dashboard on a phone: language menu at the top, location buttons, indicator
+    cards, and the menu bar at the bottom'
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/phone.png
+  height: 844
+  location: Location SW
+  markers:
+  - n: 1
+    x: 68.21
+    y: 2.84
+  - n: 2
+    x: 50.0
+    y: 5.45
+  - n: 3
+    x: 50.0
+    y: 96.65
+  viewport: phone
+  width: 390
+poll:
+  alt: 'The community poll: five questions with answers from 1 to 5, a list of connections
+    to the area, and a submit button'
+  captured: 16 October 2026
+  file: /assets/tutorials/img/dashboard/poll.png
+  height: 704
+  location: Global
+  markers:
+  - n: 1
+    x: 13.89
+    y: 20.95
+  - n: 2
+    x: 50.83
+    y: 79.19
+  - n: 3
+    x: 17.94
+    y: 92.83
+  viewport: desktop
+  width: 1208

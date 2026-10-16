@@ -1,0 +1,48 @@
+---
+---
+{% assign rue = site.data.rue %}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} · {{ rue.name }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta property="og:title" content="{{ page.title }} · {{ rue.name }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="{{ '/assets/css/tutorial.css' | relative_url }}">
+</head>
+<body class="{{ page.body_class }}">
+  <header>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="{{ '/' | relative_url }}">{{ rue.name }}</a>
+        {% unless page.url == '/tutorials/' %}<span aria-hidden="true">›</span> <a href="{{ '/tutorials/' | relative_url }}">Tutorials</a>{% endunless %}
+      </nav>
+      <h1>{{ page.title }}</h1>
+      {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+      {% if page.audience or page.time %}
+      <div class="status">
+        {% if page.audience %}<span class="pill">For: {{ page.audience }}</span>{% endif %}
+        {% if page.time %}<span class="pill">{{ page.time }}</span>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <main class="wrap">
+  {{ content }}
+  </main>
+
+  <footer>
+    <div class="wrap"><div>
+      <div class="logos">
+      {% for l in rue.logos %}{% if l.url %}<a href="{{ l.url }}">{% endif %}<img src="{{ l.src | relative_url }}" alt="{{ l.alt }}">{% if l.url %}</a>{% endif %}{% endfor %}
+      </div>
+      {{ rue.funding | markdownify }}
+      {{ rue.disclaimer | markdownify }}
+    </div></div>
+  </footer>
+</body>
+</html>
