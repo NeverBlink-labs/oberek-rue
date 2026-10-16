@@ -9,7 +9,7 @@ values from the OBEREK metadata graph, and then:
 Everything is read-only: the notebook only lists and downloads public files. The metadata and ontology
 come from the open-source OBEREK pipelines on GitHub ([NeverBlink-labs/oberek-code](https://github.com/NeverBlink-labs/oberek-code)).
 
-Requirements: `pip install boto3 pandas matplotlib rdflib requests`
+The first code cell after the settings installs what the notebook needs (in Google Colab too).
 
 ```python
 # Settings. The OBEREK metadata and ontology are published with the OBEREK pipelines on GitHub
@@ -22,6 +22,10 @@ STATION = "southwest"   # folder name in the bucket: southwest or north (south s
 LOCATION = "SouthWest"  # the same place in the metadata: SouthWest or North
 DAYS = 2                # full UTC days to download, plus today so far
 HOURS = 6               # hours of linked data to load for the SPARQL questions in section 5
+```
+
+```python
+%pip install -q boto3 pandas matplotlib rdflib requests  # already installed? this does nothing
 ```
 
 ```python
@@ -502,7 +506,7 @@ iot.head()
 ```
 
 ```text
-2,971 files, 29,710 readings from 2026-10-14 00:00 to 2026-10-16 17:09 UTC
+3,004 files, 30,040 readings from 2026-10-14 00:00 to 2026-10-16 17:53 UTC
 ```
 
 <div class="table-scroll output">
@@ -617,88 +621,88 @@ ORDER BY ?sensor_es ?property
   <tbody>
     <tr>
       <th>0</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de conductividad eléctrica</td>
       <td>s4mari:Salinity</td>
-      <td>875.00</td>
+      <td>861.00</td>
       <td>unit:MilliGM-PER-L</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de conductividad eléctrica</td>
       <td>s4mari:WaterConductivity</td>
-      <td>1,590.00</td>
+      <td>1,565.00</td>
       <td>unit:MicroS-PER-CentiM</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de conductividad eléctrica</td>
       <td>s4mari:WaterTemperature</td>
-      <td>27.40</td>
+      <td>26.30</td>
       <td>unit:DEG_C</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de conductividad eléctrica</td>
       <td>s4watr:TotalDissolvedSolids</td>
-      <td>795.00</td>
+      <td>783.00</td>
       <td>unit:MilliGM-PER-L</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de oxígeno disuelto</td>
       <td>bufr4_b13:083</td>
-      <td>11.82</td>
+      <td>11.32</td>
       <td>unit:MilliGM-PER-L</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de oxígeno disuelto</td>
       <td>s4mari:WaterTemperature</td>
-      <td>24.00</td>
+      <td>24.30</td>
       <td>unit:DEG_C</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de pH</td>
       <td>qudt_qk:Acidity</td>
-      <td>7.55</td>
+      <td>7.56</td>
       <td>unit:PH</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de pH</td>
       <td>s4mari:WaterTemperature</td>
-      <td>28.09</td>
+      <td>26.54</td>
       <td>unit:DEG_C</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de turbidez</td>
       <td>s4mari:WaterTemperature</td>
-      <td>18.40</td>
+      <td>19.10</td>
       <td>unit:DEG_C</td>
       <td>nbi:Location-SouthWest</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
       <td>Sensor de turbidez</td>
       <td>s4watr:Turbidity</td>
       <td>998.70</td>
@@ -790,7 +794,8 @@ compare.groupby("feature")["difference %"].max().to_frame("largest difference, %
 </div>
 </div>
 
-The differences are rounding noise: OBEREK averages and stores the values as 32-bit floats. The chart below
+The differences are rounding noise: OBEREK averages and stores the values as 32-bit floats. Today is left out on purpose: the
+dashboard calculates today's point during the day, so it is based on fewer readings than ours. The chart below
 shows how much one daily point hides. The minute readings are grey and the daily means are green. The
 orange crosses are the dashboard's published points.
 
@@ -945,7 +950,7 @@ print(f"{len(ttl_keys)} files, {len(kg):,} triples in the combined graph")
 ```
 
 ```text
-316 files, 30,744 triples in the combined graph
+314 files, 30,564 triples in the combined graph
 ```
 
 **What was measured, where, and when?** The observation files only say which sensor made a reading. The location
@@ -985,113 +990,113 @@ ORDER BY ?place ?measurement
       <th>0</th>
       <td>North</td>
       <td>Dissolved oxygen</td>
-      <td>36</td>
-      <td>2026-10-16 11:20:14+00:00</td>
-      <td>2026-10-16 17:11:18+00:00</td>
+      <td>37</td>
+      <td>2026-10-16 12:00:14+00:00</td>
+      <td>2026-10-16 17:50:32+00:00</td>
     </tr>
     <tr>
       <th>1</th>
       <td>North</td>
       <td>Electrical conductivity</td>
-      <td>36</td>
-      <td>2026-10-16 11:20:14+00:00</td>
-      <td>2026-10-16 17:11:18+00:00</td>
+      <td>37</td>
+      <td>2026-10-16 12:00:14+00:00</td>
+      <td>2026-10-16 17:50:32+00:00</td>
     </tr>
     <tr>
       <th>2</th>
       <td>North</td>
       <td>Salinity</td>
-      <td>36</td>
-      <td>2026-10-16 11:20:14+00:00</td>
-      <td>2026-10-16 17:11:18+00:00</td>
+      <td>37</td>
+      <td>2026-10-16 12:00:14+00:00</td>
+      <td>2026-10-16 17:50:32+00:00</td>
     </tr>
     <tr>
       <th>3</th>
       <td>North</td>
       <td>Total dissolved solids</td>
-      <td>36</td>
-      <td>2026-10-16 11:20:14+00:00</td>
-      <td>2026-10-16 17:11:18+00:00</td>
+      <td>37</td>
+      <td>2026-10-16 12:00:14+00:00</td>
+      <td>2026-10-16 17:50:32+00:00</td>
     </tr>
     <tr>
       <th>4</th>
       <td>North</td>
       <td>Turbidity</td>
-      <td>36</td>
-      <td>2026-10-16 11:20:14+00:00</td>
-      <td>2026-10-16 17:11:18+00:00</td>
+      <td>37</td>
+      <td>2026-10-16 12:00:14+00:00</td>
+      <td>2026-10-16 17:50:32+00:00</td>
     </tr>
     <tr>
       <th>5</th>
       <td>North</td>
       <td>Water temperature</td>
-      <td>144</td>
-      <td>2026-10-16 11:20:14+00:00</td>
-      <td>2026-10-16 17:11:18+00:00</td>
+      <td>148</td>
+      <td>2026-10-16 12:00:14+00:00</td>
+      <td>2026-10-16 17:50:32+00:00</td>
     </tr>
     <tr>
       <th>6</th>
       <td>North</td>
       <td>pH</td>
-      <td>36</td>
-      <td>2026-10-16 11:20:14+00:00</td>
-      <td>2026-10-16 17:11:18+00:00</td>
+      <td>37</td>
+      <td>2026-10-16 12:00:14+00:00</td>
+      <td>2026-10-16 17:50:32+00:00</td>
     </tr>
     <tr>
       <th>7</th>
       <td>South-West</td>
       <td>Dissolved oxygen</td>
-      <td>280</td>
-      <td>2026-10-16 11:13:06.770000+00:00</td>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>277</td>
+      <td>2026-10-16 11:56:06.786000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
     </tr>
     <tr>
       <th>8</th>
       <td>South-West</td>
       <td>Electrical conductivity</td>
-      <td>280</td>
-      <td>2026-10-16 11:13:06.770000+00:00</td>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>277</td>
+      <td>2026-10-16 11:56:06.786000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
     </tr>
     <tr>
       <th>9</th>
       <td>South-West</td>
       <td>Salinity</td>
-      <td>280</td>
-      <td>2026-10-16 11:13:06.770000+00:00</td>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>277</td>
+      <td>2026-10-16 11:56:06.786000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
     </tr>
     <tr>
       <th>10</th>
       <td>South-West</td>
       <td>Total dissolved solids</td>
-      <td>280</td>
-      <td>2026-10-16 11:13:06.770000+00:00</td>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>277</td>
+      <td>2026-10-16 11:56:06.786000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
     </tr>
     <tr>
       <th>11</th>
       <td>South-West</td>
       <td>Turbidity</td>
-      <td>280</td>
-      <td>2026-10-16 11:13:06.770000+00:00</td>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>277</td>
+      <td>2026-10-16 11:56:06.786000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
     </tr>
     <tr>
       <th>12</th>
       <td>South-West</td>
       <td>Water temperature</td>
-      <td>1120</td>
-      <td>2026-10-16 11:13:06.770000+00:00</td>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>1108</td>
+      <td>2026-10-16 11:56:06.786000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
     </tr>
     <tr>
       <th>13</th>
       <td>South-West</td>
       <td>pH</td>
-      <td>280</td>
-      <td>2026-10-16 11:13:06.770000+00:00</td>
-      <td>2026-10-16 17:12:06.806000+00:00</td>
+      <td>277</td>
+      <td>2026-10-16 11:56:06.786000+00:00</td>
+      <td>2026-10-16 17:54:06.837000+00:00</td>
     </tr>
   </tbody>
 </table>
@@ -1175,23 +1180,23 @@ ORDER BY ?place ?measurement
       <th>0</th>
       <td>North</td>
       <td>Dissolved oxygen</td>
-      <td>36</td>
-      <td>8</td>
+      <td>37</td>
+      <td>4</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>North</td>
       <td>Electrical conductivity</td>
-      <td>36</td>
-      <td>36</td>
-      <td>1</td>
+      <td>37</td>
+      <td>37</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>North</td>
       <td>Salinity</td>
-      <td>36</td>
+      <td>37</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1199,7 +1204,7 @@ ORDER BY ?place ?measurement
       <th>3</th>
       <td>North</td>
       <td>Turbidity</td>
-      <td>36</td>
+      <td>37</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1207,15 +1212,15 @@ ORDER BY ?place ?measurement
       <th>4</th>
       <td>North</td>
       <td>Water temperature</td>
-      <td>144</td>
-      <td>12</td>
+      <td>148</td>
+      <td>11</td>
       <td>0</td>
     </tr>
     <tr>
       <th>5</th>
       <td>North</td>
       <td>pH</td>
-      <td>36</td>
+      <td>37</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1223,15 +1228,15 @@ ORDER BY ?place ?measurement
       <th>6</th>
       <td>South-West</td>
       <td>Dissolved oxygen</td>
-      <td>280</td>
-      <td>92</td>
+      <td>277</td>
+      <td>124</td>
       <td>29</td>
     </tr>
     <tr>
       <th>7</th>
       <td>South-West</td>
       <td>Electrical conductivity</td>
-      <td>280</td>
+      <td>277</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1239,7 +1244,7 @@ ORDER BY ?place ?measurement
       <th>8</th>
       <td>South-West</td>
       <td>Salinity</td>
-      <td>280</td>
+      <td>277</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1247,15 +1252,15 @@ ORDER BY ?place ?measurement
       <th>9</th>
       <td>South-West</td>
       <td>Turbidity</td>
-      <td>280</td>
-      <td>280</td>
-      <td>280</td>
+      <td>277</td>
+      <td>277</td>
+      <td>277</td>
     </tr>
     <tr>
       <th>10</th>
       <td>South-West</td>
       <td>Water temperature</td>
-      <td>1120</td>
+      <td>1108</td>
       <td>83</td>
       <td>0</td>
     </tr>
@@ -1263,7 +1268,7 @@ ORDER BY ?place ?measurement
       <th>11</th>
       <td>South-West</td>
       <td>pH</td>
-      <td>280</td>
+      <td>277</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1306,67 +1311,67 @@ ORDER BY ?mesura ?lloc
       <th>0</th>
       <td>Nord</td>
       <td>Conductivitat elèctrica</td>
-      <td>2080</td>
+      <td>2079.19</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Sud-oest</td>
       <td>Conductivitat elèctrica</td>
-      <td>1580.64</td>
+      <td>1585.51</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Nord</td>
       <td>Oxigen dissolt</td>
-      <td>6.9</td>
+      <td>7.23</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Sud-oest</td>
       <td>Oxigen dissolt</td>
-      <td>9.7</td>
+      <td>10.22</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Nord</td>
       <td>Salinitat</td>
-      <td>1143.64</td>
+      <td>1143.22</td>
     </tr>
     <tr>
       <th>5</th>
       <td>Sud-oest</td>
       <td>Salinitat</td>
-      <td>869.4</td>
+      <td>872.08</td>
     </tr>
     <tr>
       <th>6</th>
       <td>Nord</td>
       <td>Sòlids dissolts totals</td>
-      <td>1040</td>
+      <td>1039.59</td>
     </tr>
     <tr>
       <th>7</th>
       <td>Sud-oest</td>
       <td>Sòlids dissolts totals</td>
-      <td>790.57</td>
+      <td>792.99</td>
     </tr>
     <tr>
       <th>8</th>
       <td>Nord</td>
       <td>Temperatura de l’aigua</td>
-      <td>25.41</td>
+      <td>25.28</td>
     </tr>
     <tr>
       <th>9</th>
       <td>Sud-oest</td>
       <td>Temperatura de l’aigua</td>
-      <td>24.12</td>
+      <td>24.3</td>
     </tr>
     <tr>
       <th>10</th>
       <td>Nord</td>
       <td>Terbolesa</td>
-      <td>38.31</td>
+      <td>38.26</td>
     </tr>
     <tr>
       <th>11</th>
@@ -1378,13 +1383,13 @@ ORDER BY ?mesura ?lloc
       <th>12</th>
       <td>Nord</td>
       <td>pH</td>
-      <td>7.86</td>
+      <td>7.89</td>
     </tr>
     <tr>
       <th>13</th>
       <td>Sud-oest</td>
       <td>pH</td>
-      <td>7.4</td>
+      <td>7.43</td>
     </tr>
   </tbody>
 </table>

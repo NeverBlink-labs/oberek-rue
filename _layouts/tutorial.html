@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/tutorial.css' | relative_url }}">
 </head>
 <body class="{{ page.body_class }}">
-  <header>
+  <header id="top">
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb">
         <a href="{{ '/' | relative_url }}">{{ rue.name }}</a>
@@ -33,6 +33,13 @@
 
   <main class="wrap">
   {{ content }}
+  {% unless page.url == '/tutorials/' %}
+  <nav class="page-end no-print" aria-label="End of page">
+    <a class="btn secondary" href="#top">↑ Back to top</a>
+    <a class="btn secondary" href="{{ '/tutorials/' | relative_url }}">All tutorials</a>
+    {% if page.printable %}<a class="btn secondary" href="javascript:window.print()">Print this guide</a>{% endif %}
+  </nav>
+  {% endunless %}
   </main>
 
   <footer>

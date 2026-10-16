@@ -6,6 +6,7 @@ lead: A step-by-step guide to the dashboard for l'Albufera. No technical knowled
 description: Plain-language guide to the OBEREK dashboard for farmers, fishers and residents of l'Albufera de València.
 audience: farmers, fishers, residents, everyone
 time: 10 minutes
+printable: true
 ---
 
 The OBEREK dashboard is a **health check for l'Albufera**. Water sensors, a weather station, flow gauging stations,
@@ -280,4 +281,3 @@ Exact thresholds and calculations: [Help & Documentation](https://oberek.neverbl
 The data is provisional. Questions? Write to [contact@neverblink.eu](mailto:contact@neverblink.eu).
 </div>
 
-<p class="no-print"><a class="btn secondary" href="javascript:window.print()">Print this guide</a></p>

@@ -126,6 +126,10 @@ footer .wrap > div { padding: 1.25rem 24px; }
   ol.steps > li { padding-left: 2.6rem; }
   .logos img { height: 44px; }
 }
+.page-end { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 2.5rem 0 1rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
 @media print {
   header, footer, .no-print { display: none; }
   main { border: 0; box-shadow: none; margin: 0; }

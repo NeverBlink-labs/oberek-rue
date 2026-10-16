@@ -60,10 +60,14 @@ def to_markdown(nb):
             out.append(text)
             continue
         out.append(f"```python\n{cell.source}\n```")
+        if cell.source.startswith("%pip"):
+            continue  # pip's messages are not worth showing
         for o in cell.outputs:
             if o.output_type == "error":
                 raise SystemExit(f"Notebook failed: {o.ename}: {o.evalue}")
             if o.output_type == "stream":
+                if not o.text.strip():
+                    continue
                 out.append(f"```text\n{o.text.rstrip()}\n```")
                 continue
             data = o.get("data", {})
