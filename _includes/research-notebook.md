@@ -18,8 +18,8 @@ REPO = "https://raw.githubusercontent.com/NeverBlink-labs/oberek-code/main/model
 METADATA = f"{REPO}/oberek-metadata-init/oberek_metadata.ttl"
 ONTOLOGY = f"{REPO}/oberek-ontology-init/oberek_ontology.ttl"
 
-STATION = "southwest"   # folder name in the bucket: southwest or north (south sends simulated data)
-LOCATION = "SouthWest"  # the same place in the metadata: SouthWest or North
+STATION = "southwest"   # folder name in the bucket: southwest, north or south
+LOCATION = "SouthWest"  # the same place in the metadata: SouthWest, North or South
 DAYS = 2                # full UTC days to download, plus today so far
 HOURS = 6               # hours of linked data to load for the SPARQL questions in section 5
 ```
@@ -922,7 +922,7 @@ vocabulary of the OBEREK metadata and ontology. Load them into the same graph as
 automatically connected to its sensor, its location, the property it measures, the property's names in three
 languages, its reference values, and the indicators it feeds. One SPARQL query can then use all of that at once.
 
-Here we load the last few hours from **both** real stations, SouthWest and North.
+Here we load the last few hours from two stations, SouthWest and North.
 
 ```python
 def list_after(prefix, after=""):
@@ -1416,7 +1416,6 @@ saved oberek_southwest_daily.csv oberek_oxygen_hourly.csv
 * **The indicators (KEI-1, KEI-2, KEI-3)** combine these statuses into levels from 1 to 5. The dashboard's
   [Help page](https://oberek.neverblink.eu/help), section "How the KEIs Are Calculated", explains the method.
   OBEREK publishes its own results every 15 minutes under `keis/kei-1/csv/`, `keis/kei-2/csv/` and `keis/kei-3/csv/`.
-  The South water station currently sends simulated data, so the results for the South and Global locations are not real yet.
 * **The pipelines are open source.** The exact queries behind the indicators are in
   [NeverBlink-labs/oberek-code](https://github.com/NeverBlink-labs/oberek-code): the KEIs in `pipeline/kei-*-processing/`,
   the rice blast index in `pipeline/pri/`, and the ingestion of each source in `pipeline/*-ingestion/`. Start there if you

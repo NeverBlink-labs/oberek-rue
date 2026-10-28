@@ -5,6 +5,8 @@ lead: Three short guides to using OBEREK, from reading the dashboard to working 
 description: Tutorials for the OBEREK dashboard, live sensor data and re-deriving the Key Ecological Indicators.
 ---
 
+<p class="langs-intro"><a href="{{ '/tutorials/dashboard/es/' | relative_url }}" lang="es" hreflang="es">Guía del panel en español</a> · <a href="{{ '/tutorials/dashboard/va/' | relative_url }}" lang="ca-valencia" hreflang="ca-valencia">Guia del tauler en valencià</a></p>
+
 Pick the guide that fits what you want to do. Each one points to the
 [Help and documentation page](https://oberek.neverblink.eu/help) on the dashboard for the full definitions.
 

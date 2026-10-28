@@ -1,20 +1,24 @@
 {%- comment -%}
 Screenshot with numbered markers drawn on top.
 Usage: {% include shot.html id="kei1-page" caption="…" %}
-Image, size, capture date and marker positions come from _data/screenshots.yml,
-which scripts/capture_screenshots.py rewrites. Never edit that file by hand.
+Image, size, capture date and marker positions come from _data/screenshots.yml
+(or _data/screenshots_<lang>.yml on a translated page, falling back to English),
+which scripts/capture_screenshots.py rewrites. Never edit those files by hand.
 {%- endcomment -%}
-{%- assign s = site.data.screenshots[include.id] -%}
+{%- assign lang = page.lang | default: site.lang | default: 'en' -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign shots_key = 'screenshots_' | append: lang -%}
+{%- assign s = site.data[shots_key][include.id] | default: site.data.screenshots[include.id] -%}
 {%- if s -%}
 <figure class="shot{% if s.viewport == 'phone' %} phone{% endif %}">
   <div class="shot-frame">
-    <a href="{{ s.file | relative_url }}" title="Open the full-size image"><img src="{{ s.file | relative_url }}" alt="{{ s.alt }}" width="{{ s.width }}" height="{{ s.height }}" loading="lazy"></a>
+    <a href="{{ s.file | relative_url }}" title="{{ t.open_image }}"><img src="{{ s.file | relative_url }}" alt="{{ s.alt }}" width="{{ s.width }}" height="{{ s.height }}" loading="lazy"></a>
     {%- for m in s.markers %}
     <span class="marker" style="left:{{ m.x }}%;top:{{ m.y }}%" aria-hidden="true">{{ m.n }}</span>
     {%- endfor %}
   </div>
-  <figcaption>{% if include.caption %}{{ include.caption }} {% endif %}Screenshot from {{ s.captured }}{% if s.location %}, {{ s.location }} selected{% endif %}.</figcaption>
+  <figcaption>{% if include.caption %}{{ include.caption }} {% endif %}{{ t.screenshot_from }} {{ s.captured }}{% if s.location %}, {{ s.location }} {{ t.selected }}{% endif %}.</figcaption>
 </figure>
 {%- else -%}
-<p class="shot-missing">Screenshot “{{ include.id }}” has not been captured yet (run <code>scripts/capture_screenshots.py</code>).</p>
+<p class="shot-missing">Screenshot “{{ include.id }}” {{ t.shot_missing }} (<code>scripts/capture_screenshots.py</code>).</p>
 {%- endif -%}

@@ -1,0 +1,240 @@
+# Written by scripts/capture_screenshots.py. Do not edit by hand.
+aux-flow:
+  alt: Tarjetas de caudal de las estaciones de aforo de las golas, los canales entre
+    el lago y el mar
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/aux-flow.png
+  height: 672
+  location: Global
+  markers:
+  - n: 1
+    x: 44.04
+    y: 20.24
+  viewport: desktop
+  width: 1208
+aux-weather:
+  alt: 'Tarjetas meteorológicas de la estación Tancat de l''Estell: presión, irradiancia,
+    evapotranspiración, temperatura, humectación foliar, humedad, precipitación y
+    una rosa de los vientos'
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/aux-weather.png
+  height: 1204
+  location: Ubicación S
+  markers:
+  - n: 1
+    x: 48.2
+    y: 74.01
+  - n: 2
+    x: 83.71
+    y: 74.01
+  viewport: desktop
+  width: 1208
+footer:
+  alt: 'La parte inferior de cada página: última actualización, botón de actualizar,
+    aviso sobre el uso de los datos y contacto'
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/footer.png
+  height: 132
+  location: Global
+  markers:
+  - n: 1
+    x: 47.8
+    y: 14.75
+  - n: 2
+    x: 63.04
+    y: 13.62
+  - n: 3
+    x: 74.54
+    y: 14.75
+  viewport: desktop
+  width: 1240
+kei-cards:
+  alt: 'Las tres tarjetas de indicadores: calidad del agua, salud del hábitat y percepción
+    de la comunidad, cada una con su nivel y un pequeño gráfico'
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/kei-cards.png
+  height: 247
+  location: Ubicación SO
+  markers:
+  - n: 1
+    x: 20.73
+    y: 18.92
+  - n: 2
+    x: 20.9
+    y: 23.28
+  - n: 3
+    x: 16.45
+    y: 61.54
+  viewport: desktop
+  width: 1208
+kei1-cards:
+  alt: Seis tarjetas de medición de los sensores de agua de la ubicación Suroeste,
+    cada una con su estado, el último valor y un gráfico
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/kei1-cards.png
+  height: 516
+  location: Ubicación SO
+  markers:
+  - n: 1
+    x: 5.82
+    y: 7.27
+  - n: 2
+    x: 21.75
+    y: 7.17
+  - n: 3
+    x: 9.46
+    y: 18.51
+  viewport: desktop
+  width: 1208
+kei1-satellite:
+  alt: Mediciones por satélite del área Suroeste junto a un mapa en color de la misma
+    área
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/kei1-satellite.png
+  height: 894
+  location: Ubicación SO
+  markers:
+  - n: 1
+    x: 45.19
+    y: 4.14
+  - n: 2
+    x: 55.75
+    y: 2.52
+  - n: 3
+    x: 78.62
+    y: 31.66
+  viewport: desktop
+  width: 1208
+kei1-trend:
+  alt: 'La página de calidad del agua: gráfico de línea de la puntuación de los últimos
+    30 días, con el nivel actual en la esquina'
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/kei1-trend.png
+  height: 357
+  location: Ubicación SO
+  markers:
+  - n: 1
+    x: 88.01
+    y: 16.11
+  - n: 2
+    x: 38.32
+    y: 12.53
+  viewport: desktop
+  width: 1208
+kei2-weather:
+  alt: La página de salud del hábitat de la ubicación Sur, con las tarjetas del riesgo
+    de piriculariosis y la velocidad del viento
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/kei2-weather.png
+  height: 960
+  location: Ubicación S
+  markers:
+  - n: 1
+    x: 27.49
+    y: 71.62
+  - n: 2
+    x: 8.92
+    y: 86.73
+  - n: 3
+    x: 43.32
+    y: 85.06
+  - n: 4
+    x: 62.59
+    y: 81.52
+  viewport: desktop
+  width: 1240
+kei3:
+  alt: 'La página de percepción de la comunidad: el nivel del KEI-3 en el tiempo,
+    un gráfico de anillo por pregunta y un gráfico de barras de quién respondió'
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/kei3.png
+  height: 1180
+  location: Global
+  markers:
+  - n: 1
+    x: 88.15
+    y: 17.51
+  - n: 2
+    x: 36.21
+    y: 48.04
+  - n: 3
+    x: 16.88
+    y: 57.96
+  - n: 4
+    x: 75.7
+    y: 48.04
+  viewport: desktop
+  width: 1240
+locations-map:
+  alt: Mapa de l'Albufera con las tres ubicaciones monitorizadas y las estaciones
+    de aforo
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/locations-map.png
+  height: 760
+  location: Global
+  markers: []
+  viewport: desktop
+  width: 1208
+overview:
+  alt: 'Página principal del panel OBEREK: menú a la izquierda, botones de ubicación
+    arriba, las tres tarjetas de indicadores y el inicio de la encuesta de la comunidad'
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/overview.png
+  height: 900
+  location: Global
+  markers:
+  - n: 1
+    x: 11.51
+    y: 11.06
+  - n: 2
+    x: 54.71
+    y: 5.72
+  - n: 3
+    x: 32.39
+    y: 15.75
+  - n: 4
+    x: 30.95
+    y: 44.78
+  - n: 5
+    x: 14.58
+    y: 96.72
+  viewport: desktop
+  width: 1440
+phone:
+  alt: 'El panel en un móvil: menú de idioma arriba, botones de ubicación, tarjetas
+    de indicadores y la barra de menú abajo'
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/phone.png
+  height: 844
+  location: Ubicación SO
+  markers:
+  - n: 1
+    x: 68.21
+    y: 2.84
+  - n: 2
+    x: 50.0
+    y: 5.45
+  - n: 3
+    x: 50.0
+    y: 96.65
+  viewport: phone
+  width: 390
+poll:
+  alt: 'La encuesta de la comunidad: preguntas con respuestas del 1 al 5, una lista
+    de vínculos con la zona y el botón de envío'
+  captured: 28 de octubre de 2026
+  file: /assets/tutorials/img/dashboard/es/poll.png
+  height: 759
+  location: Global
+  markers:
+  - n: 1
+    x: 10.69
+    y: 19.44
+  - n: 2
+    x: 50.83
+    y: 78.12
+  - n: 3
+    x: 17.52
+    y: 93.34
+  viewport: desktop
+  width: 1208

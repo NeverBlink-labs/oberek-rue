@@ -1,0 +1,57 @@
+# Interface text for the tutorial layout, per page language (front matter `lang:`).
+# Spanish and Valencian wording follows the OBEREK dashboard's own translations.
+# Pages that are translations of each other share a `ref:` and get a language switcher.
+en:
+  name: English
+  html_lang: en
+  tutorials: Tutorials
+  for: "For:"
+  back_to_top: "↑ Back to top"
+  all_tutorials: All tutorials
+  print: Print this guide
+  open_image: Open the full-size image
+  screenshot_from: Screenshot from
+  selected: selected
+  shot_missing: has not been captured yet
+es:
+  name: Español
+  html_lang: es
+  tutorials: Tutoriales
+  for: "Para:"
+  back_to_top: "↑ Volver arriba"
+  all_tutorials: Todos los tutoriales
+  print: Imprimir esta guía
+  open_image: Abrir la imagen a tamaño completo
+  screenshot_from: Captura del
+  selected: seleccionada
+  shot_missing: aún no se ha capturado
+  hint: Esta guía también está en español
+  funding: |
+    Este proyecto ha recibido financiación indirecta del programa de investigación
+    e innovación Horizonte Europa de la Unión Europea, en el marco del proyecto
+    RURBANIVE (Acuerdo de Subvención n.º 101136597).
+  disclaimer: |
+    Los entregables y materiales públicos de OBEREK reflejan únicamente las
+    opiniones del consorcio OBEREK. Ni la Comisión Europea ni el proyecto RURBANIVE
+    son responsables del uso que pueda hacerse de la información contenida en ellos.
+va:
+  name: Valencià
+  html_lang: ca-valencia
+  tutorials: Tutorials
+  for: "Per a:"
+  back_to_top: "↑ Tornar a dalt"
+  all_tutorials: Tots els tutorials
+  print: Imprimir esta guia
+  open_image: Obrir la imatge a grandària completa
+  screenshot_from: Captura del
+  selected: seleccionada
+  shot_missing: encara no s'ha capturat
+  hint: Esta guia també està en valencià
+  funding: |
+    Aquest projecte ha rebut finançament indirecte del programa d'investigació i
+    innovació Horitzó Europa de la Unió Europea, en el marc del projecte RURBANIVE
+    (Acord de Subvenció núm. 101136597).
+  disclaimer: |
+    Els lliurables i materials públics d'OBEREK reflecteixen únicament les opinions
+    del consorci OBEREK. Ni la Comissió Europea ni el projecte RURBANIVE són
+    responsables de l'ús que es puga fer de la informació que contenen.

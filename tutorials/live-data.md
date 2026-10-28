@@ -31,7 +31,7 @@ app, database or alerting without asking anyone for access.
 - **Endpoint:** `https://oberek.neverblink.eu/s3`. This is an S3-compatible gateway (path-style addressing).
 - **Bucket:** `oberek-bucket`
 - **Access:** public and read-only. You don't need credentials; uploads and deletions are refused.
-- **Stations:** `southwest` (Sèquia de Rizarbe) and `north` (Sèquia de Ravisanxo). A third station, `south`, currently sends simulated data, so leave it out of anything real. The KEI results for the South and Global locations are calculated from it too.
+- **Stations:** `southwest` (Sèquia de Rizarbe), `north` (Sèquia de Ravisanxo) and `south` (Sèquia Obera).
 - **How the files are made:** every ingestion and calculation pipeline is open source, in [NeverBlink-labs/oberek-code](https://github.com/NeverBlink-labs/oberek-code). If you want to know exactly how a column was produced, the pipeline that writes it is there.
 
 Each CSV file holds one sensor message, with one row per measurement:
@@ -98,7 +98,7 @@ The weather folder is called `avamet` because the station belongs to the AVAMET 
 
 | `FOLDER` | What arrives | How often |
 |---|---|---|
-| `raw/iot/southwest/csv`, `raw/iot/north/csv` | water sensors: pH, oxygen, turbidity, conductivity, salinity, temperature | about every minute / every 10 min |
+| `raw/iot/southwest/csv`, `raw/iot/north/csv`, `raw/iot/south/csv` | water sensors: pH, oxygen, turbidity, conductivity, salinity, temperature | about every minute (southwest), every 10 min (north, south) |
 | `raw/avamet/estell/csv` | weather from the Tancat de l'Estell station (Fundació Assut, part of the AVAMET network): temperature, humidity, rain, wind, pressure, sunlight, evapotranspiration, leaf wetness | every few minutes |
 | `raw/copernicus/csv` | Copernicus Sentinel-2 satellite: chlorophyll-a, phycocyanin, Secchi depth, vegetation and water indices, per location | once a day |
 | `raw/csv-water/csv` | lagoon water level and flow through the golas, from the six gauging stations of the Júcar river authority (CHJ) | twice a day (CHJ updates the data once a day) |

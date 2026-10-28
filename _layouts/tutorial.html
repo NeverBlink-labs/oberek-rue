@@ -1,8 +1,10 @@
 ---
 ---
 {% assign rue = site.data.rue %}
+{% assign lang = page.lang | default: site.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ t.html_lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,13 +20,18 @@
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb">
         <a href="{{ '/' | relative_url }}">{{ rue.name }}</a>
-        {% unless page.url == '/tutorials/' %}<span aria-hidden="true">›</span> <a href="{{ '/tutorials/' | relative_url }}">Tutorials</a>{% endunless %}
+        {% unless page.url == '/tutorials/' %}<span aria-hidden="true">›</span> <a href="{{ '/tutorials/' | relative_url }}">{{ t.tutorials }}</a>{% endunless %}
       </nav>
+      {% if page.ref %}
+      <nav class="langs no-print" aria-label="Language">
+        {% for l in site.data.i18n %}{% assign v = site.pages | where: "ref", page.ref | where: "lang", l[0] | first %}{% if v %}{% if v.url == page.url %}<span aria-current="page">{{ l[1].name }}</span>{% else %}<a href="{{ v.url | relative_url }}" hreflang="{{ l[1].html_lang }}" lang="{{ l[1].html_lang }}">{{ l[1].name }}</a>{% endif %}{% endif %}{% endfor %}
+      </nav>
+      {% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
       {% if page.audience or page.time %}
       <div class="status">
-        {% if page.audience %}<span class="pill">For: {{ page.audience }}</span>{% endif %}
+        {% if page.audience %}<span class="pill">{{ t.for }} {{ page.audience }}</span>{% endif %}
         {% if page.time %}<span class="pill">{{ page.time }}</span>{% endif %}
       </div>
       {% endif %}
@@ -32,12 +39,26 @@
   </header>
 
   <main class="wrap">
+  {% if page.ref and lang == 'en' %}
+  {% for l in site.data.i18n %}{% if l[1].hint %}{% assign v = site.pages | where: "ref", page.ref | where: "lang", l[0] | first %}{% if v %}
+  <p class="tip lang-hint no-print" data-lang="{{ l[1].html_lang }}" lang="{{ l[1].html_lang }}"><a href="{{ v.url | relative_url }}">{{ l[1].hint }} →</a></p>
+  {% endif %}{% endif %}{% endfor %}
+  <script>
+    // Point Spanish and Catalan/Valencian browsers to their version (Valencian browsers usually report "ca").
+    (navigator.languages || [navigator.language]).some(function (code) {
+      var want = /^es\b/i.test(code) ? "es" : /^ca\b/i.test(code) ? "ca-valencia" : null;
+      var hint = want && document.querySelector('.lang-hint[data-lang="' + want + '"]');
+      if (hint) hint.style.display = "block";
+      return !!hint;
+    });
+  </script>
+  {% endif %}
   {{ content }}
   {% unless page.url == '/tutorials/' %}
   <nav class="page-end no-print" aria-label="End of page">
-    <a class="btn secondary" href="#top">↑ Back to top</a>
-    <a class="btn secondary" href="{{ '/tutorials/' | relative_url }}">All tutorials</a>
-    {% if page.printable %}<a class="btn secondary" href="javascript:window.print()">Print this guide</a>{% endif %}
+    <a class="btn secondary" href="#top">{{ t.back_to_top }}</a>
+    <a class="btn secondary" href="{{ '/tutorials/' | relative_url }}">{{ t.all_tutorials }}</a>
+    {% if page.printable %}<a class="btn secondary" href="javascript:window.print()">{{ t.print }}</a>{% endif %}
   </nav>
   {% endunless %}
   </main>
@@ -47,8 +68,8 @@
       <div class="logos">
       {% for l in rue.logos %}{% if l.url %}<a href="{{ l.url }}">{% endif %}<img src="{{ l.src | relative_url }}" alt="{{ l.alt }}">{% if l.url %}</a>{% endif %}{% endfor %}
       </div>
-      {{ rue.funding | markdownify }}
-      {{ rue.disclaimer | markdownify }}
+      {{ t.funding | default: rue.funding | markdownify }}
+      {{ t.disclaimer | default: rue.disclaimer | markdownify }}
     </div></div>
   </footer>
 </body>

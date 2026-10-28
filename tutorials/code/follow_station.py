@@ -105,8 +105,7 @@ def follow(station, hours, interval, once=False, out=None):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    p.add_argument("--station", default="southwest", choices=["southwest", "north", "south"],
-                   help="south currently sends simulated data")
+    p.add_argument("--station", default="southwest", choices=["southwest", "north", "south"])
     p.add_argument("--hours", type=float, default=6, help="how much history to backfill and keep on screen")
     p.add_argument("--interval", type=int, default=60, help="seconds between checks (please keep >= 60)")
     p.add_argument("--once", action="store_true", help="backfill, save the plot and exit")

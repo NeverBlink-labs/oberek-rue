@@ -117,7 +117,7 @@
   <h2>Promotional materials</h2>
   {% if rue.promo.size > 0 %}
   <ul>
-  {% for p in rue.promo %}<li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>{% endfor %}
+  {% for p in rue.promo %}<li><a href="{{ p.url | relative_url }}"{% if p.lang %} lang="{{ p.lang }}" hreflang="{{ p.lang }}"{% endif %}>{{ p.title }}</a></li>{% endfor %}
   </ul>
   {% else %}<p class="soon">Coming soon.</p>{% endif %}
 

@@ -1,0 +1,239 @@
+# Written by scripts/capture_screenshots.py. Do not edit by hand.
+aux-flow:
+  alt: Targetes de cabal de les estacions d'aforament de les goles, els canals entre
+    el llac i la mar
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/aux-flow.png
+  height: 672
+  location: Global
+  markers:
+  - n: 1
+    x: 42.07
+    y: 20.24
+  viewport: desktop
+  width: 1208
+aux-weather:
+  alt: 'Targetes meteorològiques de l''estació Tancat de l''Estell: pressió, irradiància,
+    evapotranspiració, temperatura, humectació foliar, humitat, precipitació i una
+    rosa dels vents'
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/aux-weather.png
+  height: 1204
+  location: Ubicació S
+  markers:
+  - n: 1
+    x: 47.5
+    y: 74.01
+  - n: 2
+    x: 82.0
+    y: 74.01
+  viewport: desktop
+  width: 1208
+footer:
+  alt: 'La part de baix de cada pàgina: última actualització, botó d''actualitzar,
+    avís sobre l''ús de les dades i contacte'
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/footer.png
+  height: 132
+  location: Global
+  markers:
+  - n: 1
+    x: 49.05
+    y: 14.75
+  - n: 2
+    x: 64.35
+    y: 13.62
+  - n: 3
+    x: 75.29
+    y: 14.75
+  viewport: desktop
+  width: 1240
+kei-cards:
+  alt: 'Les tres targetes d''indicadors: qualitat de l''aigua, salut de l''hàbitat
+    i percepció de la comunitat, cadascuna amb el seu nivell i un xicotet gràfic'
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/kei-cards.png
+  height: 247
+  location: Ubicació SO
+  markers:
+  - n: 1
+    x: 21.69
+    y: 18.92
+  - n: 2
+    x: 21.49
+    y: 23.28
+  - n: 3
+    x: 16.45
+    y: 61.54
+  viewport: desktop
+  width: 1208
+kei1-cards:
+  alt: Sis targetes de mesurament dels sensors d'aigua de la ubicació Sud-oest, cadascuna
+    amb el seu estat, l'últim valor i un gràfic
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/kei1-cards.png
+  height: 516
+  location: Ubicació SO
+  markers:
+  - n: 1
+    x: 5.82
+    y: 7.27
+  - n: 2
+    x: 21.75
+    y: 7.17
+  - n: 3
+    x: 9.46
+    y: 18.51
+  viewport: desktop
+  width: 1208
+kei1-satellite:
+  alt: Mesuraments per satèl·lit de l'àrea Sud-oest al costat d'un mapa en color de
+    la mateixa àrea
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/kei1-satellite.png
+  height: 894
+  location: Ubicació SO
+  markers:
+  - n: 1
+    x: 46.0
+    y: 4.14
+  - n: 2
+    x: 55.75
+    y: 2.52
+  - n: 3
+    x: 78.62
+    y: 31.66
+  viewport: desktop
+  width: 1208
+kei1-trend:
+  alt: 'La pàgina de qualitat de l''aigua: gràfic de línia de la puntuació dels últims
+    30 dies, amb el nivell actual en la cantonada'
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/kei1-trend.png
+  height: 357
+  location: Ubicació SO
+  markers:
+  - n: 1
+    x: 88.6
+    y: 16.11
+  - n: 2
+    x: 37.53
+    y: 12.53
+  viewport: desktop
+  width: 1208
+kei2-weather:
+  alt: La pàgina de salut de l'hàbitat de la ubicació Sud, amb les targetes del risc
+    de piriculariosi i la velocitat del vent
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/kei2-weather.png
+  height: 960
+  location: Ubicació S
+  markers:
+  - n: 1
+    x: 27.49
+    y: 69.29
+  - n: 2
+    x: 8.92
+    y: 82.52
+  - n: 3
+    x: 43.32
+    y: 82.73
+  - n: 4
+    x: 61.5
+    y: 79.18
+  viewport: desktop
+  width: 1240
+kei3:
+  alt: 'La pàgina de percepció de la comunitat: el nivell del KEI-3 en el temps, un
+    gràfic d''anell per pregunta i un gràfic de barres de qui ha respost'
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/kei3.png
+  height: 1180
+  location: Global
+  markers:
+  - n: 1
+    x: 88.15
+    y: 17.51
+  - n: 2
+    x: 36.54
+    y: 48.04
+  - n: 3
+    x: 16.88
+    y: 57.96
+  - n: 4
+    x: 76.66
+    y: 48.04
+  viewport: desktop
+  width: 1240
+locations-map:
+  alt: Mapa de l'Albufera amb les tres ubicacions monitoritzades i les estacions d'aforament
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/locations-map.png
+  height: 760
+  location: Global
+  markers: []
+  viewport: desktop
+  width: 1208
+overview:
+  alt: 'Pàgina principal del tauler OBEREK: menú a l''esquerra, botons d''ubicació
+    a dalt, les tres targetes d''indicadors i l''inici de l''enquesta de la comunitat'
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/overview.png
+  height: 900
+  location: Global
+  markers:
+  - n: 1
+    x: 11.81
+    y: 11.06
+  - n: 2
+    x: 52.32
+    y: 5.72
+  - n: 3
+    x: 33.19
+    y: 15.75
+  - n: 4
+    x: 33.13
+    y: 44.78
+  - n: 5
+    x: 14.58
+    y: 96.72
+  viewport: desktop
+  width: 1440
+phone:
+  alt: 'El tauler en un mòbil: menú d''idioma a dalt, botons d''ubicació, targetes
+    d''indicadors i la barra de menú a baix'
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/phone.png
+  height: 844
+  location: Ubicació SO
+  markers:
+  - n: 1
+    x: 68.21
+    y: 2.84
+  - n: 2
+    x: 50.0
+    y: 5.45
+  - n: 3
+    x: 50.0
+    y: 96.65
+  viewport: phone
+  width: 390
+poll:
+  alt: 'L''enquesta de la comunitat: preguntes amb respostes de l''1 al 5, una llista
+    de vincles amb la zona i el botó d''enviament'
+  captured: 28 d'octubre de 2026
+  file: /assets/tutorials/img/dashboard/va/poll.png
+  height: 759
+  location: Global
+  markers:
+  - n: 1
+    x: 10.69
+    y: 19.44
+  - n: 2
+    x: 50.83
+    y: 78.12
+  - n: 3
+    x: 16.85
+    y: 93.34
+  viewport: desktop
+  width: 1208

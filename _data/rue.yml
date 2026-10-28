@@ -72,7 +72,12 @@ support:
     url: tutorials/live-data/
   - title: "Tutorial: analyse the raw data with metadata and SPARQL (for researchers)"
     url: tutorials/research/
-promo: []
+promo:
+  - title: "Video: the OBEREK project (in English)"
+    url: https://www.youtube.com/watch?v=PxX-j-o1c8A
+  - title: "Vídeo: el proyecto OBEREK (en español)"
+    url: https://www.youtube.com/watch?v=sKrdpQEncMs
+    lang: es
 
 # Shown in the footer, in this order. EU rules: the EU emblem must be at least
 # as big as any other logo, so keep it first and at the same height.

@@ -1,5 +1,7 @@
 ---
 layout: tutorial
+lang: en
+ref: dashboard
 title: How to read the OBEREK dashboard
 permalink: /tutorials/dashboard/
 lead: A step-by-step guide to the dashboard for l'Albufera. No technical knowledge needed.
