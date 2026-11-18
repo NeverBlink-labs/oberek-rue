@@ -44,6 +44,9 @@ access:
   - label: Web dashboard
     url: https://oberek.neverblink.eu/
     description: Maps, charts and KEI levels in English, Spanish and Valencian
+  - label: API description (OpenAPI)
+    url: https://oberek.neverblink.eu/openapi.json
+    description: Machine-readable description of the public data and poll-statistics interfaces
   - label: Code, ontology and metadata
     url: https://github.com/NeverBlink-labs/oberek-code
     description: The data ingestion and reasoning pipelines, the OBEREK ontology and the metadata, on GitHub
